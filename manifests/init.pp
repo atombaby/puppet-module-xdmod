@@ -60,6 +60,8 @@ class xdmod (
   anchor { 'xdmod::start': }
   anchor { 'xdmod::end': }
 
+  include logrotate
+
   if $database and $web {
     include xdmod::install
     include xdmod::database
