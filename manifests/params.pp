@@ -16,9 +16,11 @@ class xdmod::params {
     'RedHat': {
       $package_name = 'xdmod'
     }
-
+    'Debian': {
+      $source_url = 'xdmodsource'
+    }
     default: {
-      fail("Unsupported osfamily: ${::osfamily}, module ${module_name} only support osfamily RedHat")
+      fail("Unsupported osfamily: ${::osfamily}, module ${module_name} only support osfamily RedHat or Debian")
     }
   }
 
